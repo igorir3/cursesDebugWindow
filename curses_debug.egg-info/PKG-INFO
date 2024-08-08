@@ -1,3 +1,19 @@
+Metadata-Version: 2.1
+Name: curses_debug
+Version: 0.31
+Summary: A simple library for a beautiful output window written in curses and multiprocessing
+Home-page: https://github.com/igorir3/cursesDebugWindow
+Author: igorir3
+Author-email: kirillovigor662@gmail.com
+Keywords: python debug curses
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: windows-curses>=2.3.3
+
 # CursesDebug
 
 ## Installation
@@ -84,6 +100,6 @@ dprint.genJson()
 The script also has a couple of Easter eggs that you can look for for fun (>o<)
 
 ## Control
-Стрелки вверх/вниз - выбор
-Стрелки в сторону - включение auto-scroll
-После появления сообщения типа `[XX:XX:XX DONE] DONE!` нажмите Enter для выхода
+РЎС‚СЂРµР»РєРё РІРІРµСЂС…/РІРЅРёР· - РІС‹Р±РѕСЂ
+РЎС‚СЂРµР»РєРё РІ СЃС‚РѕСЂРѕРЅСѓ - РІРєР»СЋС‡РµРЅРёРµ auto-scroll
+РџРѕСЃР»Рµ РїРѕСЏРІР»РµРЅРёСЏ СЃРѕРѕР±С‰РµРЅРёСЏ С‚РёРїР° `[XX:XX:XX DONE] DONE!` РЅР°Р¶РјРёС‚Рµ Enter РґР»СЏ РІС‹С…РѕРґР°

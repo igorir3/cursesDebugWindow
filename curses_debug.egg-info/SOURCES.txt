@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+curses_debug/__init__.py
+curses_debug/curses_debug.py
+curses_debug.egg-info/PKG-INFO
+curses_debug.egg-info/SOURCES.txt
+curses_debug.egg-info/dependency_links.txt
+curses_debug.egg-info/requires.txt
+curses_debug.egg-info/top_level.txt
