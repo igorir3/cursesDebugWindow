@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: curses_debug
-Version: 0.31
+Version: 0.32
 Summary: A simple library for a beautiful output window written in curses and multiprocessing
 Home-page: https://github.com/igorir3/cursesDebugWindow
 Author: igorir3
@@ -15,6 +15,22 @@ Description-Content-Type: text/markdown
 Requires-Dist: windows-curses>=2.3.3
 
 # CursesDebug
+
+Does your print slow down the program? It doesn't give enough information, and if it does, then it's not really readable?
+
+Use this library!
+
+With it, you can make a beautiful-looking terminal for logs or\and debug!
+
+And one of the main features! All messages are processed through a parallel process, so that no one will slow down your code!
+
+For example, here is an example, the 1st time to output 10,000 messages using print, and the second, the same output, only using curses-debug
+
+```JSON
+Print            : 0.23720622062683105 s
+dprint.send()    : 0.05412912368774414 s
+Just pass        : 0.0009999275207519531 s 
+```
 
 ## Installation
 ```
