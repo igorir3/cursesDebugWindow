@@ -16,6 +16,8 @@ dprint.send()    : 0.05412912368774414 s
 Just pass        : 0.0009999275207519531 s 
 ```
 
+Also! You can add more. output in the form of a "description" to the conclusions!
+
 ## Installation
 ```
 pip install curses-debug
