@@ -251,6 +251,7 @@ class curses_debug():
                      "CRIT" : (255, 0, 0),
                      "SELECTION" : (255, 255, 255),
                      "UNSELECTION" : (0, 0, 0)},
+                 block_end_of_program : bool = True,
                  default : int = 0,
                  min_buffer_size : int = 10,
                  max_buffer_size : int = 1000,
@@ -275,7 +276,8 @@ class curses_debug():
         self.default = default
         self.time_function = time_function
         sys.excepthook = lambda exc_type, exc_value, tb : exception_def(exc_type, exc_value, tb, self.queue, self.time_function)
-        atexit.register(lambda: self.queue.put([f"[{self.time_function()}\tEXIT]  DONE!", "The program has completed its work\nPress Enter for exit", "EX", False]))
+        if block_end_of_program:
+            atexit.register(lambda: self.queue.put([f"[{self.time_function()}\tEXIT]  DONE!", "The program has completed its work\nPress Enter for exit", "EX", False]))
         p = mp.Process(target=create_debug_window, args=(self.queue, colors, min_buffer_size, max_buffer_size, max_buffer_size_threshold))
         p.start()
 

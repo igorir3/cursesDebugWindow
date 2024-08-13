@@ -10,7 +10,7 @@ And one of the main features! All messages are processed through a parallel proc
 
 For example, here is an example, the 1st time to output 10,000 messages using print, and the second, the same output, only using curses-debug
 
-```JSON
+```
 Print            : 0.23720622062683105 s
 dprint.send()    : 0.05412912368774414 s
 Just pass        : 0.0009999275207519531 s 
@@ -44,7 +44,9 @@ Let's talk about the arguments right away:
 >}
 >```
 >`default` - the default code status value
-> 
+>
+>`block_end_of_program` - If set to True, then when the program is disabled or crashes, it issues a message of the like this: `DONE`, after which it waits for the Enter input
+>
 > The next step is more complicated: by default, the system of monitors freezes (When the console freezes for a long time) have two mods: lite and burn. It is determined which type should be included by the number of elements in the buffer. The differences in the modes are only in the number of messages that will be processed.
 >
 > `min_buffer_size` - number of messages to be processed at a time in lite mode
@@ -102,6 +104,8 @@ dprint.genJson()
 The script also has a couple of Easter eggs that you can look for for fun (>o<)
 
 ## Control
-Стрелки вверх/вниз - выбор
-Стрелки в сторону - включение auto-scroll
-После появления сообщения типа `[XX:XX:XX DONE] DONE!` нажмите Enter для выхода
+Up/down arrows - selection
+
+Arrows to the side - enabling auto-scroll
+
+After a message like `[XX:XX:XX DONE] DONE!` press Enter to exit
