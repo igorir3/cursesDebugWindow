@@ -278,8 +278,8 @@ class curses_debug():
         sys.excepthook = lambda exc_type, exc_value, tb : exception_def(exc_type, exc_value, tb, self.queue, self.time_function)
         if block_end_of_program:
             atexit.register(lambda: self.queue.put([f"[{self.time_function()}\tEXIT]  DONE!", "The program has completed its work\nPress Enter for exit", "EX", False]))
-        p = mp.Process(target=create_debug_window, args=(self.queue, colors, min_buffer_size, max_buffer_size, max_buffer_size_threshold))
-        p.start()
+        self.p = mp.Process(target=create_debug_window, args=(self.queue, colors, min_buffer_size, max_buffer_size, max_buffer_size_threshold))
+        self.p.start()
 
     def send(self, text, status : int = -1, desc : dict | list | str  = None, replaceable : bool = False):
         while self.queue.full():
@@ -302,6 +302,9 @@ class curses_debug():
         return self.queue.qsize()
     def __len__(self) -> int:
         return self.queue.qsize()
+    
+    def close(self):
+        self.p.terminate()
     
     def genJson(self, Name : str = "Log.json"):
         self.queue.put([Name, None, "JSON", False, time.time()])

@@ -99,6 +99,12 @@ To generate "logs" in the form of json files, use this:
 ```Python
 dprint.genJson()
 ```
+
+To, let's say, prematurely close the console, use this:
+```Python
+dprint.close()
+```
+
 > Accepts only `Name` as an argument in the form of a `str` string (By default, `Log.json`)
 
 The script also has a couple of Easter eggs that you can look for for fun (>o<)

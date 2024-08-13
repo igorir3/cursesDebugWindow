@@ -6,7 +6,7 @@ def readme():
 
 setup(
   name='curses_debug',
-  version='0.4',
+  version='0.415',
   author='igorir3',
   author_email='kirillovigor662@gmail.com',
   description='A simple library for a beautiful output window written in curses and multiprocessing',

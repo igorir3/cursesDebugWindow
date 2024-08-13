@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: curses_debug
-Version: 0.4
+Version: 0.415
 Summary: A simple library for a beautiful output window written in curses and multiprocessing
 Home-page: https://github.com/igorir3/cursesDebugWindow
 Author: igorir3
@@ -115,6 +115,12 @@ To generate "logs" in the form of json files, use this:
 ```Python
 dprint.genJson()
 ```
+
+To, let's say, prematurely close the console, use this:
+```Python
+dprint.close()
+```
+
 > Accepts only `Name` as an argument in the form of a `str` string (By default, `Log.json`)
 
 The script also has a couple of Easter eggs that you can look for for fun (>o<)
